@@ -1,0 +1,78 @@
+@font-face{
+    font-family: 'khazad';
+    src: url("fonts/KhazadDum3D.ttf") format('truetype');
+}
+body{
+  margin: 0;
+  background-image: url("images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  user-select: none;
+}
+.winDiv{
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.winDec{
+    font-family: khazad;
+    font-weight: bold;
+    color: red;
+}
+
+.diceParent{
+  display: flex;
+  align-items: center;
+}
+
+.diceChild{
+  width: 50vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btnDiv{
+  width: 100vw;
+  height: 20vh;
+}
+
+.btnDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playBtn{
+   width: 20%;
+}
+
+@media (orientation: landscape){
+
+}
+
+@media (orientation: portrait){
+    .diceParent{
+        flex-direction: column;
+    }
+    #playBtn{
+        width: 40%;
+     }
+}
+
+@keyframes rotate {
+    from{
+         transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(3600deg);
+    }
+}
+
+.roller{
+    animation: rotate 2s linear;
+}
